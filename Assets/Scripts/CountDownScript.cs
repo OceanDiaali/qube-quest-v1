@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CountDownScript : MonoBehaviour {
 
-	public float timeLeft = 20.0f;
+	public static float timeLeft = 30.0f;
 	public Text startText;
 	
 	// Update is called once per frame
@@ -20,6 +20,8 @@ public class CountDownScript : MonoBehaviour {
 			//Do something useful or Load a new game scene depending on your use-case
 			startText.color = Color.white;
 			startText.text = "Time Up!";
+			Time.timeScale = 0;
+
 		}
 	}
 }

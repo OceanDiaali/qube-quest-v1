@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
 	//public Transform[] target;
-	public float speed;
+	public float speed = 5f;
+
+
+	//CountDownScript checkTime;
 
 	//private int current;
 
@@ -19,6 +22,6 @@ public class EnemyScript : MonoBehaviour {
 //			current = (current + 1) % target.Length;
 //		}
 		//transform.position = new Vector3(Mathf.PingPong(Time.time, 2), transform.position.y, transform.position.z);
-		transform.position = new Vector3(Mathf.PingPong(Time.time, 1), transform.position.y, Mathf.PingPong(Time.time, 2));
+		transform.position = new Vector3(Mathf.PingPong(Time.time, 1), transform.position.y, Mathf.PingPong(Time.time, 2) * speed);
 	}
 }
