@@ -15,16 +15,4 @@ public class CoinScript : MonoBehaviour {
 		//rotate on Y
 		transform.Rotate(Vector3.up * angle, Space.World);
 	}
-
-	void OnCollisionEnter (Collision coll) {
-		if (coll.gameObject.name == "Coin") {
-			Destroy (coll.gameObject);
-		} 
-		if (coll.gameObject.name == "Coin1") {
-			Destroy (coll.gameObject);
-		} 
-		if (coll.gameObject.name == "Coin2") {
-			Destroy (coll.gameObject);
-		}
-	}
 }

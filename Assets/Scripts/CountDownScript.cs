@@ -10,6 +10,10 @@ public class CountDownScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		startGameTimer ();
+	}
+
+	void startGameTimer() {
 		timeLeft -= Time.deltaTime;
 		startText.text = (timeLeft).ToString("0");
 		if (timeLeft <= 5) {

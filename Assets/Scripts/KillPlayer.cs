@@ -8,6 +8,7 @@ public class KillPlayer : MonoBehaviour {
 	//public GameObject particleExplosion;
 	//public GameObject blow;
 	public Text EndGame;
+	public int lives = 3;
 
 	void Update() {
 	}
@@ -16,8 +17,15 @@ public class KillPlayer : MonoBehaviour {
 	void OnCollisionEnter (Collision col) {
 			if (col.gameObject.name == "Player") {
 				Destroy (col.gameObject);
-			    EndGame.text = "You lost!";
-			    Time.timeScale = 0;
+			    lives--;
+			if (lives == 0) {
+				//EndGame.text = "You lost!";
+				//Time.timeScale = 0;
+			} else {
+				EndGame.text = "You lost!";
+				Time.timeScale = 0;
+			}
+			    
 				//Explode ();
 			}
 	}
